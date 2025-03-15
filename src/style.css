@@ -1,46 +1,55 @@
 /* src/style.css */
 
-/* Global styles */
+/* General page styles */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-h1 {
-  color: #333;
-}
-
-h2 {
-  color: #444;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: #3498db;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+/* Styling for the student card */
+.student-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-}
-
-/* Utility Classes */
-.text-center {
+  width: 300px;
   text-align: center;
+  margin: 20px;
 }
 
-.text-primary {
-  color: #3498db;
+/* Styling for student image */
+.student-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Styling for student name */
+.student-name {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+
+/* Styling for other student details */
+.student-age,
+.student-course,
+.student-city {
+  font-size: 18px;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Hover effect on the card */
+.student-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
