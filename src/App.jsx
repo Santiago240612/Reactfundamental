@@ -1,5 +1,18 @@
+import React from 'react';
+import Header from './components/header'; // Importing Header component
+import Hero from './components/hero'; // Importing Hero component
+import Services from './components/services'; // Importing Services component
+import Footer from './components/footer'; // Importing Footer component
+
 const App = () => {
-  return <div className='text-2xl'>Hello there</div>;
+  return (
+    <div>
+      <Header />
+      <Hero />
+      <Services />
+      <Footer />
+    </div>
+  );
 };
 
-export default App;
+export default App; // Exporting App to be rendered in the main index.js
