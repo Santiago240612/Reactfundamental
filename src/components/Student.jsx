@@ -19,7 +19,7 @@ const Student = ({ student }) => {
       <p className='student-city'>City: {student.city}</p>
 
       {/* Render GPA grade */}
-      <Grade gpa={student.GPA} />
+      <Grade gpa={student.gpa} />
 
       {/* Render Graduate Status */}
       <p className='student-status'>Status: {graduateStatus}</p>

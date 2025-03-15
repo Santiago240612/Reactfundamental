@@ -1,5 +1,20 @@
 /* src/style.css */
 
+/* Styling for the container that holds all the student cards */
+.students-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Use a minimum card size of 300px */
+  gap: 70px; /* Increased space between cards (was 20px, now 30px) */
+  padding: 40px;
+  justify-items: center; /* Ensure cards are centered in each column */
+  width: 100%; /* Make sure the container takes up the full width */
+  max-width: 1200px; /* Set a max-width for the container */
+  margin: 0 auto; /* Center the grid on the page */
+}
+
 /* General page styles */
 body {
   font-family: Arial, sans-serif;
@@ -9,7 +24,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Ensure full viewport height */
 }
 
 /* Styling for the student card */
@@ -18,9 +33,9 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 300px;
+  width: 100%;
   text-align: center;
-  margin: 20px;
+  transition: transform 0.3s ease; /* Smooth scaling effect */
 }
 
 /* Styling for student image */
@@ -52,8 +67,7 @@ body {
 
 /* Hover effect on the card */
 .student-card:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
+  transform: scale(1.05); /* Scale up the card slightly on hover */
 }
 
 /* Specific style for grade and status */
