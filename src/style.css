@@ -1,83 +1,60 @@
-/* src/style.css */
+/* style.css */
 
-/* Styling for the container that holds all the student cards */
-.students-container {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(300px, 1fr)
-  ); /* Use a minimum card size of 300px */
-  gap: 70px; /* Increased space between cards (was 20px, now 30px) */
-  padding: 40px;
-  justify-items: center; /* Ensure cards are centered in each column */
-  width: 100%; /* Make sure the container takes up the full width */
-  max-width: 1200px; /* Set a max-width for the container */
-  margin: 0 auto; /* Center the grid on the page */
-}
-
-/* General page styles */
+/* General styling for the app */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ensure full viewport height */
+  height: 100vh;
+  background-color: #f4f4f4;
 }
 
-/* Styling for the student card */
-.student-card {
+/* Styling for the container */
+div {
   background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.3s ease; /* Smooth scaling effect */
+  width: 300px;
 }
 
-/* Styling for student image */
-.student-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
+/* Button styling */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: 100%;
+  transition: background-color 0.3s ease;
 }
 
-/* Styling for student name */
-.student-name {
-  font-size: 24px;
-  color: #333;
-  margin: 0;
+button:hover {
+  background-color: #0056b3;
 }
 
-/* Styling for other student details */
-.student-age,
-.student-course,
-.student-city,
-.student-status,
-.student-grade {
-  font-size: 18px;
-  color: #555;
-  margin: 10px 0;
+/* Input field styling */
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
-/* Hover effect on the card */
-.student-card:hover {
-  transform: scale(1.05); /* Scale up the card slightly on hover */
+input:focus {
+  border-color: #007bff;
 }
 
-/* Specific style for grade and status */
-.student-grade {
-  font-weight: bold;
-  font-size: 20px;
-  color: #4caf50; /* Green for grade */
-}
-
-.student-status {
-  font-style: italic;
-  color: #ff6347; /* Red for status */
+input::placeholder {
+  color: #aaa;
 }
